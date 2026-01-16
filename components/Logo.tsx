@@ -4,12 +4,12 @@ export const Logo: React.FC<{ className?: string }> = ({ className = "" }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className={`flex items-center ${className}`}>
+    <div className={`flex items-center h-32 md:h-40 overflow-hidden ${className}`}>
       {!imgError ? (
         <img 
           src="logo.png" 
           alt="SchleicherAiSolutions" 
-          className="h-10 md:h-12 w-auto object-contain"
+          className="h-full w-auto object-contain"
           onError={() => setImgError(true)}
         />
       ) : (
